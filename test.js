@@ -8,7 +8,7 @@ test('Static img src should exist', t => {
   t.end()
 })
 
-test('should parse img', t => {
+test('should update img src with arc static helper', t => {
   const imgMD = '![My Image](myimage.jpg)'
   const result = md.render(imgMD)
   const expected = /_static\/myimage\.jpg/
