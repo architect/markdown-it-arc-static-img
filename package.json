@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-arc-static-img",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds arc static paths to img tag src attributes when parsing markdown",
   "main": "index.js",
   "scripts": {
