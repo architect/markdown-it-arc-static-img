@@ -15,3 +15,10 @@ test('should update img src with arc static helper', t => {
   t.ok(expected.test(result), result, 'Parsed image markdown')
   t.end()
 })
+
+test('should not blow up when inline element has no attributes', t => {
+  const span = '<span></span>'
+  const result = md.render(span)
+  t.ok(result)
+  t.end()
+})
