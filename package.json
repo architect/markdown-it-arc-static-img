@@ -18,12 +18,12 @@
   },
   "homepage": "https://github.com/architect/markdown-it-arc-static-img#readme",
   "dependencies": {
-    "@architect/functions": "^3.14.0",
-    "markdown-it": "^12.0.6",
-    "tap-spec": "^2.2.2",
-    "tape": "^5.2.2"
+    "@architect/functions": "^4.0.0",
+    "markdown-it": "^12.0.6"
   },
   "devDependencies": {
-    "aws-sdk": "^2.914.0"
+    "aws-sdk": "^2.914.0",
+    "tap-spec": "^2.2.2",
+    "tape": "^5.2.2"
   }
 }

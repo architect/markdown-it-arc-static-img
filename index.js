@@ -23,6 +23,6 @@ const forAttributes = kid => {
 
 const mutateSrcAttribute = attr => {
   if(attr[0] === 'src')  {
-    attr[1] = static(attr[1])
+    attr[1] = static(attr[1], { stagePath: false })
   }
 }
