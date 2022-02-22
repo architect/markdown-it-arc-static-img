@@ -17,6 +17,9 @@
     "url": "https://github.com/architect/markdown-it-arc-static-img/issues"
   },
   "homepage": "https://github.com/architect/markdown-it-arc-static-img#readme",
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "@architect/functions": "^5.0.2",
     "markdown-it": "^12.3.2"
