@@ -17,6 +17,14 @@ test('should update img src with arc static helper', t => {
   t.ok(expected.test(result), 'Updated img src attribute with arc.static helper')
 })
 
+test('should not update external img src', t => {
+  t.plan(1)
+  const imgMD = '![My Image](https://foo.com/myimage.jpg)'
+  const result = md.render(imgMD)
+  const expected = /_static/
+  t.ok(!expected.test(result), 'Img src attribute not updated by arc.static helper')
+})
+
 test('should not blow up when inline element has no attributes', t => {
   t.plan(1)
   const span = '<span></span>'
