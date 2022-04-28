@@ -1,4 +1,5 @@
 const { static } = require('@architect/functions')
+const externalPattern = /^((http|https):\/\/)/
 
 module.exports = function staticImgSrc(md) {
   md.core.ruler.push('arc-static', forTokens)
@@ -23,6 +24,8 @@ const forAttributes = kid => {
 
 const mutateSrcAttribute = attr => {
   if(attr[0] === 'src')  {
-    attr[1] = static(attr[1], { stagePath: false })
+    if (!externalPattern.test(attr[1])) {
+      attr[1] = static(attr[1], { stagePath: false })
+    }
   }
 }
