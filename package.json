@@ -4,7 +4,7 @@
   "description": "Adds arc static paths to img tag src attributes when parsing markdown",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js | tap-spec"
+    "test": "tape test.js | tap-arc"
   },
   "repository": {
     "type": "git",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "aws-sdk": "^2.914.0",
-    "tap-spec": "^5.0.0",
-    "tape": "^5.5.2"
+    "tap-arc": "^0.3.4",
+    "tape": "^5.5.3"
   }
 }
