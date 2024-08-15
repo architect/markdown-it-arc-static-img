@@ -6,13 +6,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '14'
+          node-version: '20'
       - run: npm i -g npm@8
-      - run: npm i --legacy-peer-deps
-      - run: npm t
+      - run: npm it
 
   # Publish to package registries
   publish:
@@ -24,12 +23,12 @@ jobs:
     # Go
     steps:
       - name: Check out repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 14
+          node-version: 20
           registry-url: https://registry.npmjs.org/
 
       # Publish to npm
