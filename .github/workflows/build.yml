@@ -17,7 +17,8 @@ jobs:
   publish:
     # Setup
     needs: test
-    if: startsWith(github.ref, 'refs/tags/v')
+    # ! This is disabled! Architect doesn't seem to own this package
+    if: false && startsWith(github.ref, 'refs/tags/v')
     runs-on: ubuntu-latest
 
     # Go
